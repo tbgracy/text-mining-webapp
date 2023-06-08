@@ -1,0 +1,22 @@
+La compression des données est un vaste sujet qui a fait l’objet de nombreux ouvrages et articles. Elle
+donne lieu aujourd’hui à de nombreuses recherches en raison des enjeux économiques. Elle est utilisée
+majoritairement dans les applications informatiques et elle est une des conditions d’existence du
+multimédia. L’utilisation de la compression et sa mise en pratique nécessitent des connaissances
+nombreuses et complexes tels que le calcul intégral, l’algèbre linéaire, la géométrie fractale, la théorie
+des probabilités.
+La compression consiste à réduire la taille physique de blocs d’informations. Elle est très utile pour
+plusieurs applications informatiques. Les diﬀérents algorithmes de compression sont basés sur 3
+critères :
+– Le taux de compression : c’est le rapport de la taille du ﬁchier compressé sur la taille du ﬁchier initial.
+– La qualité de compression : sans ou avec pertes (avec le pourcentage de perte).
+– La vitesse de compression et de décompression.
+Un compresseur utilise un algorithme qui sert à optimiser les données en fonction du type de données
+à compresser ; un décompresseur est donc nécessaire pour reconstruire les données grâce à
+l’algorithme dual de celui utilisé pour la compression. La méthode de compression dépend du type de
+données à compresser car une image ou un ﬁchier audio ne représentent pas le même type de
+données. De nos jours, la puissance des processeurs augmente plus vite que les capacités de stockage,
+et énormément plus vite que la bande passante des réseaux (car cela imposerait d’énormes
+changements dans les infrastructures de télécommunication). Il y a donc un déséquilibre entre le
+volume des données qu’il est possible de traiter, de stocker, et de transférer. Par conséquent, il faut
+donc réduire la taille des données. Pour cela, il faut exploiter la puissance des processeurs, pour pallier
+aux insuﬃsances des capacités de stockage en mémoire et des vitesses de transmission sur les réseaux.

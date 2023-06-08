@@ -1,0 +1,141 @@
+html {
+    --accent-color: teal;
+    --grey: rgb(233, 233, 233);
+    --black: rgb(34, 34, 34);
+    --red: rgb(233, 61, 61);
+    font-family: 'Nunito';
+    font-size: 16px;
+    /* background-color: rgb(233, 233, 233); */
+}
+
+button {
+    border: 2px solid var(--accent-color);
+    background-color: white;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: all .2s ease-in;
+    position: relative;
+    left: -5em;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transition: all .2s ease-out;
+}
+
+p,
+h1,
+h2 {
+    color: var(--black);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+footer {
+    font-size: smaller;
+    text-align: center;
+}
+
+main {
+    min-height: 80vh;
+}
+
+hr {
+    border: 1px solid var(--grey);
+}
+
+/* section {
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 2em;
+    margin: 2em;
+} */
+
+input {
+    background-color: var(--grey);
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .2s ease-in;
+}
+
+body {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    text-align: center;
+}
+
+p {
+    padding: .5em 4em;
+    text-align: justify;
+}
+
+em {
+    display: inline-block;
+    text-decoration: underline var(--accent-color);
+}
+
+.message {
+    text-align: center;
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--red);
+    position: relative;
+    box-sizing: border-box;
+    padding: .5em 1em;
+}
+
+.close-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position:  absolute;
+    /* right: 0; */
+    /* bottom: 0; */
+    background-color: var(--red);
+}
+
+.keyword-item {
+    background-color: var(--grey);
+    border-radius: 20px;
+    display: inline-block;
+    padding: .4em .8em;
+    margin: .2em .1em;
+    font-size: smaller;
+    box-sizing: border-box;
+    line-height: 1em;
+    cursor: default;
+    transition: all .2s ease-in;
+}
+
+.keyword-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transition: all .2s ease-out;
+}
+
+li {
+    margin-bottom: 1em;
+}

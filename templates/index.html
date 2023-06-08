@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Text mining 🧰</title>
+</head>
+
+<body>
+    <main>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        <section>
+            <h1>Text mining 🧰</h1>
+            <h2>📂 Veuillez choisir un fichier texte à analyser : </h2>
+            <form action="{{url_for('home')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="doc" id="doc" required>
+                <button type="submit">Traiter</button>
+            </form>
+        </section>
+        {% if results %}
+        <section>
+            <h2>🔎 Résultat pour <em>{{ filename }}</em> : </h2>
+            <ul>
+                {% for result in results.items() %}
+                <li>
+                    {% if result[0] == 'keywords'%}
+                    mots-clés (fréquence d'apparition) : {% for keyword in result[1] %} <span class="keyword-item">{{keyword[0]}} ({{keyword[1]}} %)</span> {% endfor %}
+                    {% elif result[0] == 'verbs' %}
+                    verbes : {% for keyword in result[1] %} <span class="keyword-item">{{keyword}}</span> {% endfor %}
+                    {% else %}
+                    {{ result[0] }} : <strong>{{ result[1] }}</strong>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            <h2>📰 Contenu du fichier : </h2>
+            <p>
+                {% for line in text %}
+                {{line}}
+                {% endfor %}
+            </p>
+        </section>
+        {% endif %}
+    </main>
+    <hr>
+    <footer>
+        &copy; 2023 - Made with 🧠 by @tbgracy
+    </footer>
+</body>
+
+</html>
