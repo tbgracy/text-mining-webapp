@@ -1,17 +1,14 @@
 from typing import List
 from collections import Counter as ctr
 
-import spacy
-import nltk
-
-
 class Counter:
-    def __init__(self, text: str):
+    def __init__(self, text: str, nlp):
         self.text_list = text
         self.raw_text_string = ' '.join(self.text_list)
         self.keywords = []
         self._load_stop_words()
         self.verbs = []
+        self.nlp = nlp
 
     def spaces(self) -> int:
         result = 0
@@ -68,8 +65,8 @@ class Counter:
         pass
 
     def find_verbs(self)-> List[str]:
-        nlp = spacy.load('fr_core_news_sm')
-        tokens_from_spacy = nlp(self.raw_text_string)
+        # nlp = spacy.load('fr_core_news_sm')
+        tokens_from_spacy = self.nlp(self.raw_text_string)
 
         self.verbs = [
             str(word)

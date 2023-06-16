@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, flash
+import spacy
 
 from functions import Counter
 
 app = Flask(__name__)
 app.secret_key = 'text mining'
 
+nlp = spacy.load('fr_core_news_sm')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -23,7 +25,7 @@ def home():
             flash('Veuillez choisir un fichier')
             return render_template('index.html')
         
-        counter = Counter(text_lines)
+        counter = Counter(text_lines, nlp)
         return render_template(
             'index.html',
             text=text_lines,
