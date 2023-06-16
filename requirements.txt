@@ -12,6 +12,7 @@ Flask==2.3.2
 fr-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.5.0/fr_core_news_sm-3.5.0-py3-none-any.whl#sha256=632607dab3a5253e5079e1b1a094cedc87185c2930e4405080d2e1810fbf9800
 gitdb==4.0.10
 GitPython==3.1.31
+gunicorn==20.1.0
 idna==3.4
 importlib-metadata==6.6.0
 itsdangerous==2.1.2
