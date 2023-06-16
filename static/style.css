@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Neusa';
+    src: url('fonts/NeusaNextStdTrial-WideRegular.otf');
+}
+
 html {
     --accent-color: teal;
+    --accent-color-2: rgba(255, 217, 0, 0.415);
     --grey: rgb(233, 233, 233);
     --black: rgb(34, 34, 34);
     --red: rgb(233, 61, 61);
@@ -33,6 +39,10 @@ h2 {
     color: var(--black);
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Neusa', 'Sans Serif';
+}
+
 h1 {
     text-align: center;
     font-size: 1.6em;
@@ -55,14 +65,6 @@ main {
 hr {
     border: 1px solid var(--grey);
 }
-
-/* section {
-    background-color: white;
-    border-radius: 20px;
-    box-sizing: border-box;
-    padding: 2em;
-    margin: 2em;
-} */
 
 input {
     background-color: var(--grey);
@@ -138,4 +140,21 @@ em {
 
 li {
     margin-bottom: 1em;
+}
+
+.keyword-highlight:not(li), .verb-highlight:not(li) {
+    display: inline-block;
+    width: fit-content;
+}
+
+.keyword-highlight {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.verb-highlight{
+    background-color: var(--accent-color-2);
+    border-radius: 20px;
+    padding: auto .8em;
+    /* margin: .2em .1em; */
 }

@@ -50,7 +50,6 @@ class Counter:
             self.keywords.append(
                 (keyword_value, round(keyword_frequency, 3), keyword[1])
             )
-        print(self.keywords)
         return self.keywords
 
     def _load_stop_words(self):
@@ -73,7 +72,7 @@ class Counter:
         tokens_from_spacy = nlp(self.raw_text_string)
 
         self.verbs = [
-            word
+            str(word)
             for word in tokens_from_spacy
             if word.pos_ == 'VERB'
         ]

@@ -28,10 +28,11 @@ def home():
             'index.html',
             text=text_lines,
             filename=raw_text.filename,
+            keywords_only=[tuple_[0] for tuple_ in counter.get_keywords()],
             results={
                 "nombre d'espaces": counter.spaces(),
                 "nombre de mots": counter.words(),
-                "nombre de charactère": counter.characters(),
+                "nombre de charactères": counter.characters(),
                 "keywords": counter.get_keywords(),
                 "nombres de phrases": counter.sentences(),
                 "verbs": counter.find_verbs(),

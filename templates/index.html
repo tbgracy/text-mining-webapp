@@ -45,10 +45,23 @@
                 </li>
                 {% endfor %}
             </ul>
-            <h2>📰 Contenu du fichier : </h2>
+            <h2>📰 Contenu du fichier (avec mise en évidence des entités) : </h2>
+            <ul>
+                <li class="verb-highlight">Verbes</li>
+                <li class="keyword-highlight">Mot-clés (8 premiers)</li>
+            </ul>
             <p>
                 {% for line in text %}
-                {{line}}
+                    {% set words = line.split(' ') %}
+                    {% for word in words %}
+                        {% if word in keywords_only %}
+                            <span class="keyword-highlight">{{ word }}</span>
+                        {% elif word in results['verbs'] %}
+                            <span class="verb-highlight">{{ word }}</span>
+                        {% else %}
+                            {{ word }}
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
             </p>
         </section>
